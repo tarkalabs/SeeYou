@@ -34,7 +34,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIQ-Qa-Khr">
                                 <state key="normal" title="Pick Scene Image"/>
                                 <connections>
-                                    <action selector="pickImageTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtg-rV-TeS"/>
                                     <action selector="pickSceneTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXN-2V-dam"/>
                                 </connections>
                             </button>
