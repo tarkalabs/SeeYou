@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--OpenCV-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeYou" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OpenCV" id="BYZ-38-t0r" customClass="ViewController" customModule="SeeYou" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,13 +24,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-av-WiR"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVZ-ZB-d9a">
                                 <state key="normal" title="Pick Source Image"/>
                                 <connections>
                                     <action selector="pickImageTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzi-XF-bGn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-av-WiR"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIQ-Qa-Khr">
                                 <state key="normal" title="Pick Scene Image"/>
                                 <connections>
@@ -41,18 +41,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oD0-av-WiR" secondAttribute="bottom" constant="20" id="7pY-Ae-46f"/>
-                            <constraint firstItem="EVZ-ZB-d9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="7sx-ch-1W3"/>
-                            <constraint firstItem="EVZ-ZB-d9a" firstAttribute="leading" secondItem="xcl-e5-UnI" secondAttribute="trailing" constant="20" id="AJz-hF-Gg9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="EVZ-ZB-d9a" secondAttribute="leading" id="OyF-R9-22z"/>
                             <constraint firstItem="yIQ-Qa-Khr" firstAttribute="leading" secondItem="EVZ-ZB-d9a" secondAttribute="trailing" constant="15" id="QKG-YR-EWg"/>
+                            <constraint firstItem="EVZ-ZB-d9a" firstAttribute="top" secondItem="xcl-e5-UnI" secondAttribute="bottom" constant="5.5" id="U5W-Ki-Lt6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="oD0-av-WiR" secondAttribute="leading" id="UGf-Wp-Mmc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oD0-av-WiR" secondAttribute="trailing" id="eO5-BW-TaF"/>
-                            <constraint firstItem="yIQ-Qa-Khr" firstAttribute="centerY" secondItem="EVZ-ZB-d9a" secondAttribute="centerY" id="f3g-Zh-fiN"/>
+                            <constraint firstItem="oD0-av-WiR" firstAttribute="top" secondItem="EVZ-ZB-d9a" secondAttribute="bottom" constant="8" id="eOh-PD-Zhn"/>
                             <constraint firstItem="xcl-e5-UnI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hbh-TD-sWy"/>
+                            <constraint firstItem="yIQ-Qa-Khr" firstAttribute="top" secondItem="EVZ-ZB-d9a" secondAttribute="top" id="hfc-dN-IAc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xcl-e5-UnI" secondAttribute="leading" id="ryY-KK-dIs"/>
-                            <constraint firstItem="oD0-av-WiR" firstAttribute="top" secondItem="xcl-e5-UnI" secondAttribute="bottom" constant="13" id="uiy-ZN-F5k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="D4p-hx-5YO"/>
+                    <navigationItem key="navigationItem" title="Open CV" id="D4p-hx-5YO"/>
                     <connections>
                         <outlet property="btnPickScene" destination="yIQ-Qa-Khr" id="eCD-9s-EuZ"/>
                         <outlet property="imageView" destination="oD0-av-WiR" id="j0K-7u-E6s"/>

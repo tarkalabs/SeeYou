@@ -38,7 +38,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     btnPickScene.isEnabled = false
     imgPicker = UIImagePickerController()
     scenePicker = UIImagePickerController()
-//    lblVersion.text = OpenCVWrapper.openCVVersionString()
+    lblVersion.text = OpenCVWrapper.openCVVersionString()
     // Do any additional setup after loading the view, typically from a nib.
   }
 
@@ -51,13 +51,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     if(!Comparor.instance.sourcePicked) {
       if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
         btnPickScene.isEnabled = true
-//        self.imageView.image = OpenCVWrapper.processImage(image)
-        self.imageView.image = image
+        self.imageView.image = OpenCVWrapper.processImage(image)
+        Comparor.instance.sourceImage = image
         Comparor.instance.sourcePicked = true
       }
     } else {
       if let image = info[UIImagePickerControllerEditedImage] as? UIImage,
-             let sImage = imageView.image {
+             let sImage = Comparor.instance.sourceImage {
         self.imageView.image = OpenCVWrapper.match(sImage, withScene: image)
       }
     }
